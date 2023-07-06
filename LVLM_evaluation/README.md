@@ -175,3 +175,4 @@ For dataset preparation, you can download and process the datasets we use person
     WordArt/test_image/2097.png INDIE
     WordArt/test_image/2100.png adventure
     ```
+* For ImageNetVC datasets, please download the [ranked images](https://pan.baidu.com/s/1HlMMXuM1h3OARJY1JzfGwA?pwd=cgs2)
