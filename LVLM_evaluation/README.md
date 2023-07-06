@@ -175,3 +175,5 @@ For dataset preparation, you can download and process the datasets we use person
     WordArt/test_image/2097.png INDIE
     WordArt/test_image/2100.png adventure
     ```
+* For ImageNetVC,
+    - VSR,
