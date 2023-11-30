@@ -160,7 +160,7 @@ def test(model, subset='color', model_type='synthesis', prompt_idx=0):
         else:
             candidates = load_candidates(subset)
         prefix = load_prompt(question, prompt_idx)
-        prefix_tokens = model.processor(text = prefix)
+        prefix_tokens = model.tokenizer(text = prefix,return_tensors="pt",truncation=True,max_length=512)
         start_loc = prefix_tokens.input_ids.size(1)        
         img_dir = ImageNet_path + name2idx[category]
         img_list = os.listdir(img_dir)
