@@ -202,16 +202,16 @@ def main(args):
     if 'blip2' in args.vqa_model:
         from lib.blip2_lib import Blip2Lavis
         if 't5' in args.vqa_model and '_xl' in args.vqa_model:
-            vqa_model = Blip2Lavis(name="blip2_t5", model_type="pretrain_flant5xl", device=torch.device("cuda:{}".format(args.device_id)))
+            vqa_model = Blip2Lavis(name="blip2_t5", model_type="pretrain_flant5xl", device=torch.device("cpu"))
 
         elif 't5' in args.vqa_model and '_xxl' in args.vqa_model:
-            vqa_model = Blip2Lavis(name="blip2_t5", model_type="pretrain_flant5xxl", device=torch.device("cuda:{}".format(args.device_id)))
+            vqa_model = Blip2Lavis(name="blip2_t5", model_type="pretrain_flant5xxl", device=torch.device("cpu"))
 
         elif 'opt' in args.vqa_model and '6.7b' in args.vqa_model:
-            vqa_model = Blip2Lavis(name="blip2_opt", model_type="pretrain_opt6.7b", device=torch.device("cuda:{}".format(args.device_id)))
+            vqa_model = Blip2Lavis(name="blip2_opt", model_type="pretrain_opt6.7b", device=torch.device("cpu"))
 
         elif 'opt' in args.vqa_model and '2.7b' in args.vqa_model:
-            vqa_model = Blip2Lavis(name="blip2_opt", model_type="pretrain_opt2.7b", device=torch.device("cuda:{}".format(args.device_id)))
+            vqa_model = Blip2Lavis(name="blip2_opt", model_type="pretrain_opt2.7b", device=torch.device("cpu"))
         else:
             raise NotImplemented(f'{args.vqa_model} not supported')
     elif 'llava' in args.vqa_model:
